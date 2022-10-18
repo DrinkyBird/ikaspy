@@ -1,3 +1,4 @@
 runtime/
 scripts/config.*
 config.php
+__pycache__
