@@ -1,0 +1,1 @@
+function navbarClick(){const a=document.getElementById('navbarMain'),e=document.querySelectorAll('.navbar-burger')[0];e.classList.toggle("is-active"),a.classList.toggle("is-active")}
