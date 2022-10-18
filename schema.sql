@@ -61,14 +61,6 @@ CREATE TABLE `stages` (
   `image` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE `users` (
-  `id` bigint(20) NOT NULL,
-  `username` varchar(64) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `register_time` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 CREATE TABLE `weapon_sets` (
   `id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
@@ -117,9 +109,6 @@ ALTER TABLE `rotations`
 ALTER TABLE `stages`
   ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
 ALTER TABLE `weapon_sets`
   ADD PRIMARY KEY (`id`),
   ADD KEY `weapon_special` (`special`),
@@ -130,10 +119,6 @@ ALTER TABLE `weapon_special`
 
 ALTER TABLE `weapon_sub`
   ADD PRIMARY KEY (`id`);
-
-
-ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 
 ALTER TABLE `league_members`
