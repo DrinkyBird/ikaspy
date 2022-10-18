@@ -27,3 +27,9 @@ A website for analysing Splatoon 2 Rank X and League Battle data.
 
       define('HTTP_ROOT', '/');
   ```
+* You also need to set up a cron job to get the data, I use:
+  ```
+  1  */2 * * *    python3 /path/to/ikaspy/scripts/scrape_rotation.py > /dev/null
+  15 */2 * * *    python3 /path/to/ikaspy/scripts/scrape_league.py > /dev/null
+  0  12  1 * *    python3 /path/to/ikaspy/scripts/scrape_xrank.py > /dev/null
+  ```
